@@ -47,6 +47,8 @@ def validate():
     data = request.get_json()
     token = data.get("token")
 
+    print("Received JSON:", data)
+
     if not token:
         return "Forbidden", 403
     
@@ -56,3 +58,4 @@ def validate():
         return "Forbidden", 403
     
     return jsonify({"username": username}), 200
+

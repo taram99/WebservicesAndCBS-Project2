@@ -7,6 +7,7 @@ import os
 #print(os.environ.get("JWT_SECRET"))
 
 SECRET = os.environ.get("JWT_SECRET")
+#print("SECRET:", SECRET)
 
 def base64UrlEncode(data):
     return base64.urlsafe_b64encode(json.dumps(data).encode()).decode().rstrip("=")
